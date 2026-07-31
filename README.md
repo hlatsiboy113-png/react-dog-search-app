@@ -269,10 +269,10 @@ src
 
 | Member | Responsibility |
 |---------|----------------|
-| Member 1 | Project setup, Context API, App integration |
-| Member 2 | Navigation, Search, Results Header |
-| Member 3 | API integration, Dog Grid, Dog Cards, Dog Details |
-| Member 4 | Favorites, UI Components, Testing, Loom Presentation |
+| Mahlatse Mokgawa| Project setup, Context API, App integration |
+| Nonkululeko Maphanga | Navigation, Search, Results Header |
+| Karabo Komane | API integration, Dog Grid, Dog Cards, Dog Details |
+| Qhawekazi Maramani| Favorites, UI Components, Testing, Loom Presentation |
 
 ---
 
