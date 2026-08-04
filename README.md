@@ -8,18 +8,18 @@ The project demonstrates practical use of **React Context API, custom hooks, API
 
 ---
 
-## 🔗 Quick Links
+##  Quick Links
 
 | Resource | Link |
 |---|---|
-| 🌐 Live Application | [Coming Soon](#) |
-| 💻 GitHub Repository | [PawFinder](#) |
-| 📚 State Management Documentation | [`docs/state-management.md`](docs/state-management.md) |
-| 🎥 Loom Presentation | [Coming Soon](#) |
+|  Live Application | [Coming Soon](#) |
+|  GitHub Repository | [PawFinder](#) |
+|  State Management Documentation | [`docs/state-management.md`](docs/state-management.md) |
+|  Loom Presentation | [Coming Soon](#) |
 
 ---
 
-## 📸 Preview
+##  Preview
 
 > Screenshots will be added once the main UI is completed.
 
@@ -37,19 +37,19 @@ The project demonstrates practical use of **React Context API, custom hooks, API
 
 ---
 
-# ✨ Features
+#  Features
 
 PawFinder is designed around a simple goal: make discovering dogs easy and engaging.
 
-### 🐕 Explore Dogs
+###  Explore Dogs
 
 Browse dog breeds and discover available dogs through data retrieved from an external API.
 
-### 🔍 Search
+###  Search
 
 Search for specific dog breeds using the application's shared search state.
 
-### 📖 Dog Details
+###  Dog Details
 
 View additional information about individual dogs.
 
@@ -69,7 +69,7 @@ Users receive feedback while dog data is being retrieved.
 
 The application provides user-friendly feedback when API requests fail.
 
-### 📱 Responsive Design
+###  Responsive Design
 
 The interface is designed to work across:
 
@@ -100,7 +100,7 @@ The application must demonstrate shared state being consumed by multiple compone
 
 ---
 
-# 🛠️ Technology Stack
+#  Technology Stack
 
 | Technology | Purpose |
 |---|---|
@@ -122,7 +122,7 @@ Using Context allows shared data to be accessed without unnecessarily passing pr
 
 ---
 
-# 🧠 How PawFinder Works
+#  How PawFinder Works
 
 The application's data flows through several layers:
 
@@ -400,7 +400,7 @@ fix: resolve dog API loading error
 docs: update state management documentation
 refactor: simplify DogCard component
 style: improve mobile dog grid layout
-💬 Team Communication
+ Team Communication
 
 The team uses the #pawfinder Slack channel for development communication.
 
@@ -418,28 +418,28 @@ Development Update Template
 
 👤 Developer:
 📅 Date:
-🕒 Time:
+ Time:
 
-🎯 Task:
-🌿 Branch:
+ Task:
+ Branch:
 
-📂 Files / Components Changed:
+ Files / Components Changed:
 
-📝 Summary:
+ Summary:
 Brief explanation of what changed.
 
-🔗 Pull Request:
+ Pull Request:
 Link
 
-⚠️ Action Required:
+ Action Required:
 Review / Pull latest changes / No action required
-👥 Team
+ Team
 Team Member	Role	Primary Responsibilities
 Mahlatse Mokgawa	Project Lead & State Management	Context API, architecture, integration, Git workflow, code review
 Nonkululeko Maphanga	Search & Navigation Developer	Navigation, search, results interface
 Karabo Komane	API & Dog Display Developer	API integration, dog data, cards, grid, details
 Emily Qhawekazi Maramani	UI, Features, QA & Presenter	Favourites, reusable UI, QA, responsiveness, presentation
-🧪 Testing Checklist
+ Testing Checklist
 
 Before submitting a Pull Request, verify:
 
@@ -454,7 +454,7 @@ Before submitting a Pull Request, verify:
  Dog details work
  Responsive layout works
  No existing functionality has been broken
-📱 Responsive Design
+ Responsive Design
 
 PawFinder is designed to adapt to different screen sizes.
 
@@ -470,7 +470,7 @@ Mobile
 
 Each component should maintain usability and visual consistency across supported screen sizes.
 
-🗺️ Roadmap
+ Roadmap
 Phase 1 — Foundation
  React application scaffolded
  Initial folder structure
@@ -495,7 +495,7 @@ Phase 4 — Quality & Delivery
  Documentation
  Deployment
  Loom presentation
-⚠️ Known Limitations
+ Known Limitations
 
 This section will be updated as development progresses.
 
