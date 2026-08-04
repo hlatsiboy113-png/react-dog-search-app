@@ -53,19 +53,19 @@ Search for specific dog breeds using the application's shared search state.
 
 View additional information about individual dogs.
 
-### ❤️ Favourites
+###  Favourites
 
 Save dogs to a personal favourites collection and remove them when no longer needed.
 
-### 🔄 Dynamic API Data
+###  Dynamic API Data
 
 Dog information is retrieved dynamically rather than being hard-coded into the application.
 
-### ⏳ Loading States
+### Loading States
 
 Users receive feedback while dog data is being retrieved.
 
-### ⚠️ Error Handling
+###  Error Handling
 
 The application provides user-friendly feedback when API requests fail.
 
@@ -80,7 +80,7 @@ The interface is designed to work across:
 
 ---
 
-# 🎯 Project Objective
+#  Project Objective
 
 PawFinder was developed as part of the **ZAIO Full Stack Web Development programme**.
 
@@ -181,7 +181,7 @@ Updated results displayed
 
 This architecture keeps application state separate from individual UI components.
 
-🧩 Shared State
+ Shared State
 
 The central application state is managed through DogContext.
 
@@ -202,9 +202,9 @@ error	DogGrid, ErrorMessage
 
 For the complete state architecture and component read/write relationships:
 
-👉 View State Management Documentation
+ View State Management Documentation
 
-📁 Project Structure
+Project Structure
 react-dog-search-app/
 │
 ├── public/
@@ -302,7 +302,7 @@ DogCard/
 
 This keeps component logic and styling together and makes individual features easier to maintain.
 
-🚀 Getting Started
+ Getting Started
 Prerequisites
 
 Make sure the following are installed:
@@ -333,7 +333,7 @@ http://localhost:5173/
 
 Open the URL in your browser.
 
-🔐 Environment Variables
+ Environment Variables
 
 If the Dog API requires an API key, create a .env file in the project root.
 
@@ -352,7 +352,7 @@ The .gitignore file should contain:
 
 Use .env.example to document required environment variables without exposing actual credentials.
 
-🌿 Git & GitHub Workflow
+ Git & GitHub Workflow
 
 PawFinder uses a feature-branch workflow to keep development organised and reduce merge conflicts.
 
