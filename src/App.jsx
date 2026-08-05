@@ -1,8 +1,8 @@
 
-import Navbar from "./components/Navbar";
-import SearchBar from "./components/SearchBar";
-import ResultsHeader from "./components/ResultsHeader";
-import DogGrid from "./components/DogGrid";
+import Navbar from "./components/Navbar/Navbar";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ResultsHeader from "./components/ResultsHeader/ResultsHeader";
+import DogGrid from "./components/DogGrid/DogGrid";
 
 function App() {
     return (
