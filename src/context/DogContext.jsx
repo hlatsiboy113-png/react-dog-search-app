@@ -5,6 +5,9 @@ const DogContext = createContext();
 export function DogProvider({ children }) {
     const [dogs, setDogs] = useState([]);
     const [favorites, setFavorites] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const isFavorite = (dogId) => {
         return favorites.some(favorite => favorite.id === dogId);
@@ -30,7 +33,13 @@ export function DogProvider({ children }) {
                 favorites,
                 setFavorites,
                 isFavorite,
-                toggleFavorite
+                toggleFavorite,
+                searchTerm,
+                setSearchTerm,
+                loading,
+                setLoading,
+                error,
+                setError
             }}
         >
             {children}
