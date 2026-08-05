@@ -1,59 +1,40 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import DogDetailsPage from './pages/DogDetailsPage/DogDetailsPage';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <h1>🐾 PawFinder</h1>
-          <p>Welcome to your Dog Explorer App!</p>
-        </div>
-        <div>
-          <h2>Get started</h2>
-          <p>
-            The project structure is ready. You can now begin building your API features.
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <h2>Project Goals</h2>
-          <p>Complete your API and Dog Display deliverables.</p>
-          <ul>
-            <li>Integrate Dog API</li>
-            <li>Create Dog Grid and Cards</li>
-            <li>Implement Dog Details Page</li>
-          </ul>
-        </div>
-        <div id="social">
-          <h2>Team Roles</h2>
-          <p>Working together for real world impact.</p>
-          <ul>
-            <li>Mahlatse: Project Lead</li>
-            <li>Nonkululeko: Search & Navigation</li>
-            <li>Karabo: API & Dog Display</li>
-            <li>Emily: UI & Presentation</li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <div className="app-container">
+      <header style={{ 
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 
+        color: 'white', 
+        padding: '30px 20px', 
+        textAlign: 'center',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
+      }}>
+        <h1 style={{ margin: 0, fontSize: '2.5rem' }}>🐾 PawFinder</h1>
+        <p style={{ margin: '10px 0 0', opacity: 0.9 }}>Discover your perfect canine companion</p>
+      </header>
+      
+      <main style={{ minHeight: '70vh', paddingBottom: '40px' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dog/:id" element={<DogDetailsPage />} />
+        </Routes>
+      </main>
+      
+      <footer style={{ 
+        textAlign: 'center', 
+        padding: '30px 20px', 
+        marginTop: '40px', 
+        borderTop: '1px solid #eee',
+        color: '#666'
+      }}>
+        <p>© 2026 Dog Explorer Project | Built with React & The Dog API</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
