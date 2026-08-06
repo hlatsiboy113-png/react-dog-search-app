@@ -31,7 +31,7 @@ function App() {
         borderTop: '1px solid #eee',
         color: '#666'
       }}>
-        <p>© 2026 Dog Explorer Project | Built with React & The Dog API</p>
+        <p>© 2026 Dog Explorer Project | Built by Cohesion Core with React & The Dog API | Ihub Africa 2026 Cohort</p>
       </footer>
     </div>
   );
