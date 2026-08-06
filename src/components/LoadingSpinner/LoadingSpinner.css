@@ -1,0 +1,90 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 70vh;
+
+    text-align: center;
+
+    padding: 2rem;
+}
+
+.paw-spinner {
+    font-size: 4rem;
+
+    animation: spin 2s linear infinite,
+               bounce 1.6s ease-in-out infinite;
+
+    margin-bottom: 1.5rem;
+}
+
+.loading-container h2 {
+
+    font-size: 2rem;
+
+    color: #3D3D3D;
+
+    margin-bottom: .8rem;
+
+    font-weight: 700;
+}
+
+.loading-container p {
+
+    color: #777;
+
+    font-size: 1rem;
+
+    max-width: 420px;
+
+    line-height: 1.6;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.08);
+    }
+
+}
+
+@media (max-width:768px){
+
+.loading-container h2{
+
+font-size:1.6rem;
+
+}
+
+.loading-container p{
+
+font-size:.95rem;
+
+}
+
+.paw-spinner{
+
+font-size:3rem;
+
+}
+
+}
