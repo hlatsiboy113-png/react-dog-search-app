@@ -1,4 +1,3 @@
-
 import Navbar from "./components/Navbar/Navbar";
 import SearchBar from "./components/SearchBar/SearchBar";
 import ResultsHeader from "./components/ResultsHeader/ResultsHeader";
