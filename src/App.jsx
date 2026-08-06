@@ -1,9 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import DogDetailsPage from './pages/DogDetailsPage/DogDetailsPage';
-import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ResultsHeader from "./components/ResultsHeader/ResultsHeader";
+import DogGrid from "./components/DogGrid/DogGrid";
 
 function App() {
+feature/dog-api
   return (
     <div className="app-container">
       <header style={{ 
@@ -35,6 +36,19 @@ function App() {
       </footer>
     </div>
   );
+
+    return (
+        <>
+            <Navbar />
+
+            <main>
+                <SearchBar />
+                <ResultsHeader />
+                <DogGrid />
+            </main>
+        </>
+    );
+main
 }
 
 export default App;
