@@ -1,4 +1,3 @@
-feature/dog-api
 import { useNavigate } from 'react-router-dom';
 import { useDogContext } from '../../context/DogContext';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
@@ -32,18 +31,3 @@ function DogCard({ dog }) {
 }
 
 export default DogCard;
-
-import FavoriteButton from "./FavoriteButton";
-
-function DogCard({ dog }) {
-    return (
-        <div>
-            <img src={dog.image} alt={dog.name} />
-
-            <h3>{dog.name}</h3>
-
-            <FavoriteButton dog={dog} />
-        </div>
-    );
-}
-
