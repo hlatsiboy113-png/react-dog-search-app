@@ -1,9 +1,3 @@
-import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
-
-if (loading) {
-    return <LoadingSpinner />;
-}
-=======
 import { useDogs } from '../../hooks/useDogs';
 import { useDogContext } from '../../context/DogContext';
 import DogCard from '../DogCard/DogCard';
@@ -15,8 +9,13 @@ function DogGrid() {
   const { dogs, loading, error } = useDogs();
   const { searchTerm } = useDogContext();
 
-  if (loading) return <LoadingSpinner />;
-  if (error) return <ErrorMessage message={error} />;
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
+  if (error) {
+    return <ErrorMessage message={error} />;
+  }
 
   if (!dogs || dogs.length === 0) {
     return (

@@ -19,4 +19,3 @@ function LoadingSpinner() {
 }
 
 export default LoadingSpinner;
-export default function LoadingSpinner() { return <p>Loading</p> }
