@@ -1,16 +1,12 @@
-import { useState } from "react";
+import { useDogContext } from "../../context/DogContext";
 import "./SearchBar.css";
 
-function SearchBar({ onSearch }) {
+function SearchBar() {
+    const { searchTerm, setSearchTerm } = useDogContext();
 
-    const [query,setQuery] = useState("");
-
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-
-        onSearch(query);
-
-    }
+    const handleSubmit = (e) => {
+    e.preventDefault();
+};
 
     return(
 
@@ -19,8 +15,8 @@ function SearchBar({ onSearch }) {
             <input
                 type="text"
                 placeholder="Search dog breeds..."
-                value={query}
-                onChange={(e)=>setQuery(e.target.value)}
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
             />
 
             <button type="submit">
