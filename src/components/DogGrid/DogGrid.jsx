@@ -7,20 +7,35 @@ import './DogGrid.css';
 
 function DogGrid() {
   const { dogs, loading, error } = useDogs();
-  const { searchTerm } = useDogContext();
+  const { searchTerm, setSearchTerm } = useDogContext();
 
   if (loading) {
     return <LoadingSpinner />;
   }
 
   if (error) {
-    return <ErrorMessage message={error} />;
+    return (
+      <ErrorMessage
+        message={error}
+        onRetry={() => {
+          // Retrigger fetch by briefly clearing then restoring term, or force remount via key
+          // Simplest reliable retry: toggle searchTerm whitespace-safe refresh
+          const term = searchTerm;
+          setSearchTerm(term + ' ');
+          requestAnimationFrame(() => setSearchTerm(term.trim()));
+        }}
+      />
+    );
   }
 
   if (!dogs || dogs.length === 0) {
     return (
       <div className="dog-grid-empty">
-        <p>{searchTerm ? `No dog breeds found matching "${searchTerm}"` : 'No dog breeds available'}</p>
+        <p>
+          {searchTerm
+            ? `No dog breeds found matching "${searchTerm.trim()}"`
+            : 'No dog breeds available'}
+        </p>
       </div>
     );
   }

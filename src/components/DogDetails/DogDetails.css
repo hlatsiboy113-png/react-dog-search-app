@@ -157,3 +157,72 @@
     padding: 12px;
   }
 }
+.dog-details-back {
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dog-details-back:hover {
+  background: #f1f5f9;
+}
+
+.dog-details-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.dog-details-header h1 {
+  margin: 0;
+  flex: 1;
+}
+
+.dog-details-favorite-wrap {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.dog-details-favorite-wrap .favorite-button {
+  position: static;
+}
+
+.dog-details-info p {
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.dog-details-description {
+  margin-top: 12px !important;
+  color: #475569;
+}
+
+.dog-details-gallery h2 {
+  margin: 24px 0 12px;
+  font-size: 1.25rem;
+}
+
+.dog-details-gallery-empty {
+  color: #64748b;
+}
+
+.dog-details-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.dog-details-gallery-grid img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e2e8f0;
+}
