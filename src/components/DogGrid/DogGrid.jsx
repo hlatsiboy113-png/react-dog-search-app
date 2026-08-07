@@ -1,3 +1,9 @@
+import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
+
+if (loading) {
+    return <LoadingSpinner />;
+}
+=======
 import { useDogs } from '../../hooks/useDogs';
 import { useDogContext } from '../../context/DogContext';
 import DogCard from '../DogCard/DogCard';
