@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        🐶 Dog Finder
+        🐾 Pawfinder
       </div>
 
       <ul className="nav-links">
