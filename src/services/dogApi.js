@@ -1,6 +1,8 @@
-// Vite only injects env vars that start with VITE_ from a ROOT .env file (not src/.env).
-// Restart `npm run dev` after any .env change.
+// Vite loads VITE_ environment variables from the root .env file.
+// Restart npm run dev after changing .env.
+
 const rawKey = import.meta.env.VITE_DOG_API_KEY;
+
 const API_KEY =
   typeof rawKey === 'string'
     ? rawKey.trim().replace(/^["']|["']$/g, '')
@@ -10,16 +12,18 @@ const BASE_URL = 'https://api.thedogapi.com/v1';
 
 function getHeaders() {
   const headers = {};
+
   if (API_KEY) {
     headers['x-api-key'] = API_KEY;
   }
+
   return headers;
 }
 
 async function request(path) {
   if (!API_KEY) {
     throw new Error(
-      'Missing VITE_DOG_API_KEY. Create a file named .env in the project root (next to package.json), add VITE_DOG_API_KEY=your_key, save, then stop and restart npm run dev.'
+      'Missing VITE_DOG_API_KEY. Create a .env file in the project root, add VITE_DOG_API_KEY=your_key, save it, and restart npm run dev.'
     );
   }
 
@@ -30,8 +34,9 @@ async function request(path) {
   if (!response.ok) {
     const hint =
       response.status === 403
-        ? ' (403 usually means the API key is missing, wrong, or not loaded by Vite — check root .env and restart the dev server)'
+        ? ' (403 usually means the API key is missing, incorrect, or not loaded by Vite. Check the root .env file and restart the dev server.)'
         : '';
+
     throw new Error(`API error: ${response.status}${hint}`);
   }
 
@@ -51,6 +56,7 @@ export const dogApi = {
   searchBreeds: async (searchTerm) => {
     try {
       const q = encodeURIComponent(String(searchTerm).trim());
+
       return await request(`/breeds/search?q=${q}`);
     } catch (error) {
       console.error('Error searching breeds:', error);
