@@ -12,10 +12,10 @@ The project demonstrates practical use of **React Context API, custom hooks, API
 
 | Resource | Link |
 |---|---|
-|  Live Application | [Coming Soon](#) |
-|  GitHub Repository | [PawFinder](#) |
-|  State Management Documentation | [`docs/state-management.md`](docs/state-management.md) |
-|  Loom Presentation | [Coming Soon](#) |
+| Live Application | [https://react-dog-search-app.vercel.app/](https://react-dog-search-app.vercel.app/) |
+| GitHub Repository | [hlatsiboy113-png/react-dog-search-app](https://github.com/hlatsiboy113-png/react-dog-search-app) |
+| State Management Documentation | [`docs/state-management.md`](./docs/state-management.md) |
+| Loom Presentation | _Add Loom URL after recording_ |
 
 ---
 
@@ -333,24 +333,30 @@ http://localhost:5173/
 
 Open the URL in your browser.
 
- Environment Variables
+## Environment variables
 
-If the Dog API requires an API key, create a .env file in the project root.
+The Dog API requires an API key. Vite only loads variables from a **project root** `.env` (not `src/`).
 
-Example:
+1. Copy `.env.example` to `.env` in the project root.
+2. Set:
 
+```env
 VITE_DOG_API_KEY=your_api_key_here
-Important
+```
 
-Never commit .env files containing secrets to GitHub.
+3. Restart `npm run dev` after any `.env` change.
 
-The .gitignore file should contain:
+**Never commit** `.env` or real keys to GitHub (`.gitignore` covers `.env` / `.env.*`, keeps `.env.example`).
 
-.env
-.env.*
-!.env.example
+### Vercel (production)
 
-Use .env.example to document required environment variables without exposing actual credentials.
+`VITE_*` values are embedded at **build** time.
+
+1. Vercel project → **Settings → Environment Variables**
+2. Add `VITE_DOG_API_KEY` = your key (Production / Preview as needed)
+3. **Redeploy** the project after saving
+
+Without this, the live site can return API **403** even when local `.env` works.
 
  Git & GitHub Workflow
 
@@ -547,23 +553,25 @@ The completed project will be submitted with:
 💻 GitHub Repository
 📄 State Management Documentation
 🎥 5-Minute Loom Presentation
-🏁 Project Status
+## Assignment submission
 
-Status: 🚧 In Development
+| Deliverable | Link |
+|---|---|
+| Deployed application | https://react-dog-search-app.vercel.app/ |
+| GitHub repository | https://github.com/hlatsiboy113-png/react-dog-search-app |
+| State management docs | [docs/state-management.md](./docs/state-management.md) |
+| Loom recording | _Paste Loom URL here after recording_ |
 
-Current Phase: Phase 1 — Project Foundation & Architecture
+### Feature freeze (demo)
 
-PawFinder is currently being developed collaboratively using React, Context API, Git, and GitHub.
+For the graded demo / Loom, treat **current `main`** as the freeze line: search, details, favourites, Context shared state, loading/error handling, and the heading/search UI polish. Avoid new features until after the presentation.
+
+### Project status
+
+**Status:** Ready for demo packaging (record Loom, confirm Vercel env)
+
+**Stack:** React + Vite · Context API · The Dog API · Vercel
 
 🐾 Built with React. Designed for discovery.
 
 PawFinder — Discover your next best friend.
-
-
-### One thing I would **not** do yet
-
-Don't put fake links, screenshots, API names, or "completed" checkboxes into the actual repository until they're real. The structure above intentionally uses placeholders such as:
-
-```text
-<repository-url>
-YOUR_DEPLOYED_URL
